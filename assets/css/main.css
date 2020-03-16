@@ -75,6 +75,7 @@
 		-ms-appearance: none;
 		appearance: none;
 	}
+	
 
 /* Basic */
 
@@ -196,7 +197,7 @@
 		}
 
 		a:hover {
-			color: #ff7496;
+			color: #00acee;
 		}
 
 	strong, b {
@@ -390,7 +391,7 @@
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #ff7496;
+			border-color: #00acee;
 		}
 
 	select {
@@ -486,13 +487,13 @@
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			color: #ff7496;
+			color: #00acee;
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #ff7496;
+			border-color: #00acee;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -780,7 +781,7 @@
 				}
 
 				ul.icons li a:hover:before {
-					text-shadow: 1.25px 0px 0px #ff7496, -1.25px 0px 0px #ff7496, 0px 1.25px 0px #ff7496, 0px -1.25px 0px #ff7496;
+					text-shadow: 1.25px 0px 0px #00acee, -1.25px 0px 0px #00acee, 0px 1.25px 0px #00acee, 0px -1.25px 0px #00acee;
 				}
 
 				ul.icons li a:before {
@@ -796,7 +797,7 @@
 				}
 
 				ul.icons li a:hover {
-					border-color: #ff7496;
+					border-color: #00acee;
 				}
 
 		@media screen and (max-width: 480px) {
@@ -841,8 +842,8 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			border-color: #ff7496;
-			color: #ff7496 !important;
+			border-color: #00acee;
+			color: #00acee !important;
 		}
 
 		input[type="submit"].icon,
@@ -1053,3 +1054,54 @@
 		body.is-ie #wrapper {
 			height: 100%;
 		}
+		
+
+/* Tooltip container */
+	.tooltip {
+	  position: relative;
+	  display: inline-block;
+	}
+
+	/* Tooltip text */
+	.tooltip .tooltiptext {
+	  visibility: hidden;
+	  width: 100px;
+	  background-color: #555;
+	  color: #fff;
+	  text-align: center;
+	  padding: 5px 0;
+	  border-radius: 6px;
+	  font-size: 0.6em;
+	
+	  /* Position the tooltip text */
+	  position: absolute;
+	  z-index: 1;
+	  bottom: 100%;
+	  left: 50%;
+	  margin-left: -50px;
+	
+	  /* Fade in tooltip */
+	  opacity: 0;
+	  transition: opacity 0.3s;
+	}
+	
+	/* Tooltip arrow */
+	.tooltip .tooltiptext::after {
+	  content: "";
+	  position: absolute;
+	  top: 100%;
+	  left: 50%;
+	  margin-left: -5px;
+	  border-width: 5px;
+	  border-style: solid;
+	  border-color: #555 transparent transparent transparent;
+	}
+	
+	/* Show the tooltip text when you mouse over the tooltip container */
+	.tooltip:hover .tooltiptext {
+	  visibility: visible;
+	  opacity: 1;
+	}
+		
+		
+		
